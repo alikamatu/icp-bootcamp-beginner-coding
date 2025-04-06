@@ -8,6 +8,7 @@ function App() {
 
   function handleSubmitUserProfile(event) {
     event.preventDefault();
+    
     const name = event.target.elements.name.value;
     backendActor.setUserProfile(name).then((response) => {
       if (response.ok) {
